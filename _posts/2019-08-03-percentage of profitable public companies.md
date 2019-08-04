@@ -1,4 +1,9 @@
-
+---
+title: "Percentage of Profitable Public Companies"
+date: 2019-08-03"
+tags: [API, financial data, pandas]
+excerpt: "Financial Data"
+---
 # Percentage of Profitable Public Companies
 
 financialmodelingprep.com has an API that allows users to query the financial data of a little over 5000 publicly traded companies. I wrote a script to pull the net income for 2018 of all the companies they provide data for. The data 1781 out of 5060 companies I pulled data for had negative net income.  
