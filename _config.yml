@@ -110,7 +110,7 @@ author:
   name             : "Eila Elyaskordi"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Random Projects"
-  location         : ""
+  #location         : ""
   email            :
   links:
     - label: "Email"
