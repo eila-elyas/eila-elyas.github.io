@@ -973,6 +973,6 @@ rev_stats = df3[df3.Revenue > 0].groupby("Industry").agg(['mean', 'std', 'count'
 groupedHeatMap(rev_stats, title="Revenue Statistics by Industry (In Millions)")
 ```
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/explore-ing/output_40_1.png" alt="">
+<img src="{{ site.url }}{{ site.baseurl }}/images/explore-inc/output_40_1.png" alt="">
 
 
