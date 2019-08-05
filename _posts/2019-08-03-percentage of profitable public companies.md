@@ -4,8 +4,6 @@ date: 2019-08-01"
 tags: [APIs, pandas, python, BeautifulSoup]
 ---
 
-# Percentage of Profitable Public Companies
-
 [financialmodelingprep.com](financialmodelingprep.com) has an API that allows users to query the financial data of a little over 5000 publicly traded companies. I wrote a script to pull the net income of all the companies they provide data for, for 2018. 1781 out of 5060 companies had negative net income, equaling 35%.  
 
 
@@ -863,7 +861,7 @@ Number of companies with negative net income (first number in the parantheses)
 
 
 ```python
-data[data.incomes < 0].shape[0]
+data[data.incomes < 0]
 ```
 
 
@@ -877,7 +875,7 @@ Number of companies with positive net income (first number in the parantheses)
 
 
 ```python
-data[data.incomes > 0].shape[0]
+data[data.incomes > 0]
 ```
 
 
