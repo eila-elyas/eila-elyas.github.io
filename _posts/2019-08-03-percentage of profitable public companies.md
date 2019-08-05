@@ -34,7 +34,6 @@ for i in range(len(list_data['symbolsList'])):
     fin_html = bs(fin_request.text, 'html.parser')
     fin_data = json.loads(fin_html.text)
     if len(fin_data['financials']) > 0:
-
         symbols.append(symbol)
         name.append(list_data['symbolsList'][i]['name'])
         incomes.append(fin_data['financials'][0]['Consolidated Income'])
@@ -449,6 +448,8 @@ data
 
 
 
+We can see that there are a total of 5060 companies in the dataframe.
+
 Some of the unprofitable companies
 
 
@@ -857,33 +858,7 @@ data[data.incomes < 0]
 
 
 
-Number of companies with negative net income (first number in the parantheses)
-
-
-```python
-data[data.incomes < 0]
-```
-
-
-
-
-    (1781, 3)
-
-
-
-Number of companies with positive net income (first number in the parantheses)
-
-
-```python
-data[data.incomes > 0]
-```
-
-
-
-
-    (3235, 3)
-
-
+1781 companies that lost money.
 
 Company with the most income
 
