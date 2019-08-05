@@ -1,50 +1,32 @@
 ---
-title: "Percentage of Profitable Public Companies"
-date: 2019-08-03"
-tags: [API, financial data, pandas]
-excerpt: "This post collects and analyzes profitability data of over 5000 public companies."
+title: "What Percent of Public Companies are Profitable?"
+date: 2019-08-01"
+tags: [APIs, pandas, python, BeautifulSoup]
 ---
+
 # Percentage of Profitable Public Companies
 
-financialmodelingprep.com has an API that allows users to query the financial data of a little over 5000 publicly traded companies. I wrote a script to pull the net income for 2018 of all the companies they provide data for. The data 1781 out of 5060 companies I pulled data for had negative net income.  
-
-### Importing Libraries
+[financialmodelingprep.com](financialmodelingprep.com) has an API that allows users to query the financial data of a little over 5000 publicly traded companies. I wrote a script to pull the net income of all the companies they provide data for, for 2018. 1781 out of 5060 companies had negative net income, equaling 35%.  
 
 
 ```python
+# importing libraries
 from bs4 import BeautifulSoup as bs
 import json
 import requests
 import pandas as pd
-import matplotlib.pyplot as plt
-import seaborn as sns
-import numpy as np
 %matplotlib inline
 ```
 
-### The url below lists all the companies the Financial Modeling Prep has data for
+The code snippet below creates a data frame with 3 columns (ticker symbol, net income, and name of company). It took about an hour to run.
 
 
 ```python
 list_url = "https://financialmodelingprep.com/api/v3/company/stock/list"
-```
-
-
-```python
 list_request = requests.get(list_url)
 list_html = bs(list_request.text, 'html.parser')
 list_data = json.loads(list_html.text)
-```
-
-
-```python
 financial_url = "https://financialmodelingprep.com/api/v3/financials/income-statement/"
-```
-
-### The code snippet below creates a data frame with 3 columns (ticker symbol, net income, and name of company). It took about an hour to run.
-
-
-```python
 symbols = []
 incomes = []
 name = []
@@ -58,13 +40,11 @@ for i in range(len(list_data['symbolsList'])):
         symbols.append(symbol)
         name.append(list_data['symbolsList'][i]['name'])
         incomes.append(fin_data['financials'][0]['Consolidated Income'])
-
-        
-
-        
 dictionary = {'symbol': symbols, 'incomes': incomes, 'name': name}
 data = pd.DataFrame(dictionary)
 ```
+
+Some of the companies in the dataframe
 
 
 ```python
@@ -471,13 +451,11 @@ data
 
 
 
+Some of the unprofitable companies
+
 
 ```python
 data.incomes = pd.to_numeric(data.incomes)
-```
-
-
-```python
 data[data.incomes < 0]
 ```
 
@@ -881,11 +859,11 @@ data[data.incomes < 0]
 
 
 
-### Number of companies with negative net income (first number in the parantheses)
+Number of companies with negative net income (first number in the parantheses)
 
 
 ```python
-data[data.incomes < 0].shape
+data[data.incomes < 0].shape[0]
 ```
 
 
@@ -895,11 +873,11 @@ data[data.incomes < 0].shape
 
 
 
-### Number of companies with positive net income (first number in the parantheses)
+Number of companies with positive net income (first number in the parantheses)
 
 
 ```python
-data[data.incomes > 0].shape
+data[data.incomes > 0].shape[0]
 ```
 
 
@@ -909,7 +887,7 @@ data[data.incomes > 0].shape
 
 
 
-### Company with the most income
+Company with the most income
 
 
 ```python
@@ -955,7 +933,7 @@ data[data.incomes == max(data.incomes)]
 
 
 
-### Company that lost the most money
+Company that lost the most money
 
 
 ```python
@@ -998,5 +976,19 @@ data[data.incomes == min(data.incomes)]
   </tbody>
 </table>
 </div>
+
+
+
+Percentage of unprofitable companies
+
+
+```python
+1781/5060*100
+```
+
+
+
+
+    35.19762845849802
 
 
