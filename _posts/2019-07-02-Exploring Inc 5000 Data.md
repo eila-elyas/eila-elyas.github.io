@@ -1,5 +1,5 @@
 ---
-title: "Exploring INC's 5000 Fastest Growing Companies to 2018"
+title: "Exploring INC's 5000 Fastest Growing Companies of 2018"
 date: 2019-07-02"
 tags: [data cleansing, data visualization, pandas]
 ---
