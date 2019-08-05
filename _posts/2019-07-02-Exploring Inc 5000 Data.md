@@ -1,9 +1,12 @@
+---
+title: "Exploring INC's 5000 Fastest Growing Companies to 2018"
+date: 2019-07-02"
+tags: [data cleansing, data visualization, pandas]
+---
 
-Every year, thousands of companies submit their 3 most recent years of financial information to Inc. magazine/website in the hopes of making it on their Inc. 5000 list of fastest growing private companies in America. In a previous post, I provided a script I put together to extract this data from https://www.inc.com/inc5000/list/2018. In this post, I explore the data and discover some interesting things along with some outliers and mistakes. 
+Every year, thousands of companies submit their 3 most recent years of financial information to Inc. magazine/website in the hopes of making it on their Inc. 5000 list of fastest growing private companies in America. In a previous post, I provided a script I put together to extract this data from [https://www.inc.com/inc5000/list/2018](https://www.inc.com/inc5000/list/2018). In this post, I explore the data and discover some interesting things along with some outliers and mistakes. 
 
 I discovered what seems to be some innacuracies in what was published. More specifically, there are several companies with 0 employees reported. There's another company with $2.3 million in annual revenue and 100,000 employees, which can't be right. 
-
-I also discovered a company based in London and another in Hong Kong. I thought the list only included US companies. 
 
 There are a few interesting plots in this post as well. Enjoy!
 

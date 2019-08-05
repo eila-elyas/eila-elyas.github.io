@@ -1,8 +1,8 @@
 ---
-title: "Building a Web Scraper to Collect INCs Fastest Growing Private Companies of 2018 Data"
+title: "Building a Web Scraper to Collect INC's Fastest Growing Private Companies of 2018 Data"
 date: 2019-07-01"
 tags: [web scraping, pandas]
-excerpt: "This post provides a python script I put together to collect INCs Fastest Growing Private Companies of 2018."
+excerpt: "This post provides a python script I put together to collect INC's Fastest Growing Private Companies of 2018."
 ---
 
 Every year, thousands of companies submit their 3 most recent years of financial information to Inc. magazine/website in the hopes of making it on their Inc. 5000 list of fastest growing private companies in America. The script below extracts this data from https://www.inc.com/inc5000/list/2018. It uses the selenium library to render javascript, BeautifulSoup to read the rendered html, pandas to create a dataframe of all the data, and sqlite3 store the dataframe in a sqlite database. In the next post, I perform some exploratory analysis on the collected data.
