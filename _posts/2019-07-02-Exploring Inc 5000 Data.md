@@ -972,11 +972,7 @@ Using the newly created function
 rev_stats = df3[df3.Revenue > 0].groupby("Industry").agg(['mean', 'std', 'count', 'max', 'min', 'sum']).Revenue
 groupedHeatMap(rev_stats, title="Revenue Statistics by Industry (In Millions)")
 ```
-
-                                          Revenue Statistics by Industry (In Millions)                                      
-    
-
-
+                                 
 <img src="{{ site.url }}{{ site.baseurl }}/images/explore-ing/output_40_1.png" alt="">
 
 
