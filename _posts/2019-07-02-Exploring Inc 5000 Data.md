@@ -560,7 +560,8 @@ for p in ax.patches:
 ```
 
 
-![png](output_21_0.png)
+<img src="{{ site.url }}{{ site.baseurl }}/images/explore-inc/output_21_0.png" alt="">
+
 
 
 Number of Companies per City (top 30)
@@ -573,7 +574,8 @@ for p in ax.patches:
 ```
 
 
-![png](output_23_0.png)
+<img src="{{ site.url }}{{ site.baseurl }}/images/explore-ing/output_23_0.png" alt="">
+
 
 
 Number of Companies per State
@@ -588,7 +590,8 @@ for p in aa.patches:
 ```
 
 
-![png](output_25_0.png)
+<img src="{{ site.url }}{{ site.baseurl }}/images/explore-inc/output_25_0.png" alt="">
+
 
 
 Growth Versus Revenue Scatterplot
@@ -607,8 +610,8 @@ sns.scatterplot(x="EmployeeUpdate", y="Revenue", data=df2, ax=ax)
 
 
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/explore-inc/output_27_1.png" alt="">
 
-![png](output_27_1.png)
 
 
 There are a few companies that look like outliers. There is one in particular that stands out a lot. The point with about 100,000 employees but close to 0 revenue. Let's take a look at this one.
@@ -680,8 +683,8 @@ df2[(df2.EmployeeUpdate > 90000) & (df2.EmployeeUpdate < 110000)]
 
 
 Alcoria has 100,000 employees but only $2.3M in revenue. This doesn't seem right. However, as you can see in the image below, that is exactly what is provided in their Inc.com profile.
+<img src="{{ site.url }}{{ site.baseurl }}/images/explore-inc/Alorica.png" alt="">
 
-![title](Alorica.png)
 
 Some companies have a value of zero employees in their profile.
 
@@ -922,7 +925,8 @@ df2[df2.Employees == '0']
 
 
 The image below confirms that the script pulled the data as is provided in the profile.
-![title](zero_employees.png)
+<img src="{{ site.url }}{{ site.baseurl }}/images/explore-inc/zero_employees.png" alt="">
+
 
 Creating a new dataframe for companies with greater than zero employees
 
@@ -973,5 +977,6 @@ groupedHeatMap(rev_stats, title="Revenue Statistics by Industry (In Millions)")
     
 
 
-![png](output_40_1.png)
+<img src="{{ site.url }}{{ site.baseurl }}/images/explore-ing/output_40_1.png" alt="">
+
 
