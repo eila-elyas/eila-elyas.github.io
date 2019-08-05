@@ -574,7 +574,7 @@ for p in ax.patches:
 ```
 
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/explore-ing/output_23_0.png" alt="">
+<img src="{{ site.url }}{{ site.baseurl }}/images/explore-inc/output_23_0.png" alt="">
 
 
 
