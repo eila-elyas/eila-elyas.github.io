@@ -2,7 +2,7 @@
 title: "Percentage of Profitable Public Companies"
 date: 2019-08-03"
 tags: [API, financial data, pandas]
-excerpt: "Financial Data"
+excerpt: "This post collects and analyzes profitability data of over 5000 public companies."
 ---
 # Percentage of Profitable Public Companies
 
