@@ -107,9 +107,9 @@ analytics:
 
 # Site Author
 author:
-  name             : "Eila Elyaskordi"
+  #name             : "Eila Elyaskordi"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Random Projects"
+  bio              : "A collection of random exploratory projects"
   #location         : ""
   email            :
   links:
